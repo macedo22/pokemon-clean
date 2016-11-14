@@ -20,7 +20,7 @@ Grass::Grass(int index) : Pokemon(index){
 	specialAttack-=3; specialDefense+=0;
 }
 
-&ostream Pokemon::operator<<(ostream& operator <<(ostream& os, const Pokemon& pokemon){
+&ostream Pokemon::operator<<(ostream& os, const Pokemon& pokemon){
     os<< "Pokemon: "<<endl
         <<"\tID: " <<pokemon.id<<endl
         <<"\tNick name: " <<pokemon.nickName<<endl
