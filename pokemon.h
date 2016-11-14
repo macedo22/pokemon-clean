@@ -48,7 +48,7 @@ public:
 		return currentHP;
 	}
 	friend Pokemon* make_pokemon(element type, std::string name);
-	ostream& operator <<(c);
+	ostream& operator <<(&ostream os, const Pokemon& pokemon);
 	void write();
 
 };
