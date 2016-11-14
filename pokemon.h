@@ -7,11 +7,22 @@ enum class element {
     fire = 0, water = 1, grass = 2
 };
 
+struct PokeEntry {
+    int number;
+    char name[20];
+    char type[10];
+    char description[100];
+
+    PokeEntry() {};
+    PokeEntry(int n){};
+};
+
 
 class Pokemon {
 private:
-	std::string name;
+	std::string nickName;
 	int level = 1;
+	string id;
 protected:
 	int maxHP = 20;
 	int currentHP = maxHP;
@@ -24,8 +35,8 @@ protected:
 public:
 	Pokemon(int i) {}
 	~Pokemon() {}
-	std::string get_name() {
-		return name;
+	std::string get_nickName() {
+		return nickName;
 	}
 	int get_level() {
 		return level;
@@ -37,6 +48,8 @@ public:
 		return currentHP;
 	}
 	friend Pokemon* make_pokemon(element type, std::string name);
+	ostream& operator <<(c);
+	void write();
 
 };
 
@@ -56,3 +69,4 @@ public:
 };
 
 #endif // POKEMON_H
+
